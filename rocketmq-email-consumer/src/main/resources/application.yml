@@ -1,0 +1,42 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: email-consumer-xtl
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 120.25.207.44:9876
+      bindings:
+        input: {destination: email-topic-xtl, content-type: application/json, group: email-group}
+  # 配置邮箱
+  mail:
+    # 这是163邮箱的smtp服务器
+    host: smtp.163.com
+    # 邮箱
+    username: konosuba520@163.com
+    # 邮箱的授权码
+    password: DSAJUCXVNDLNEMFZ
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required:
+  redis:
+    # redis 地址
+    host: 192.168.203.132
+    # redis 端口
+    port: 6379
+    # 密码
+    password: 123456
+    # 第几个数据库
+    database: 1
+    # 连接池
+    lettuce:
+      pool:
+        min-idle: 5
+        max-active: 10
