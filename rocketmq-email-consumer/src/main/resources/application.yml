@@ -16,9 +16,9 @@ spring:
     # 这是163邮箱的smtp服务器
     host: smtp.163.com
     # 邮箱
-    username: konosuba520@163.com
+    username: <发件人邮箱>
     # 邮箱的授权码
-    password: DSAJUCXVNDLNEMFZ
+    password: <邮箱授权码>
     properties:
       mail:
         smtp:
