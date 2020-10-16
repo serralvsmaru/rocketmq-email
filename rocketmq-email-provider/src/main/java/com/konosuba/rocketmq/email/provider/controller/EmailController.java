@@ -21,7 +21,7 @@ public class EmailController {
 
     @PostMapping("/eamil")
     public boolean email(@RequestBody MemberDto memberDto){
-        boolean send = messageChannel.send(MessageBuilder.withPayload(memberDto)..setHeader(MessageConst.PROPERTY_TAGS, "tagStr")build());
+        boolean send = messageChannel.send(MessageBuilder.withPayload(memberDto).setHeader(MessageConst.PROPERTY_TAGS, "tagStr")build());
         return send;
     }
 }
