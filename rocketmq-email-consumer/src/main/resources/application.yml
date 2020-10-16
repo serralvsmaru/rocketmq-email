@@ -9,8 +9,10 @@ spring:
       rocketmq:
         binder:
           name-server: 120.25.207.44:9876
+        bindings:
+          input: {consumer.tags: tagStr}
       bindings:
-        input: {destination: email-topic-xtl, content-type: application/json, group: email-group}
+        input: {destination: email-topic-xtl, content-type: application/json, group: email-group, consumer.maxAttempts: 1}
   # 配置邮箱
   mail:
     # 这是163邮箱的smtp服务器
