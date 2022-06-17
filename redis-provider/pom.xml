@@ -13,7 +13,7 @@
     <name>redis-provider</name>
 
     <properties>
-        <fastjson.version>1.2.70</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
